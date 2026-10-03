@@ -1,0 +1,87 @@
+{
+  matchScore: 92,
+  technicalQuestions: [
+    {
+      question: 'How would you design and optimize our Node.js backend services and Redis caching layer to handle a sudden 3x spike in retail supply chain transaction volume?',
+
+      intention: "Evaluate the candidate's understanding of Node.js event-driven architecture, scalability patterns, Redis caching strategies, and ability to handle high-throughput enterprise systems.",
+
+      answer: 'The candidate should detail horizontal scaling strategies using Node.js clustering or containerized services with Docker, explain asynchronous non-blocking I/O handling, and describe caching patterns such as Cache-Aside or Write-Through with Redis. They should address cache invalidation, Redis connection pooling, rate limiting, and offloading heavy batch tasks to asynchronous workers.'
+    },
+    {
+      question: 'In your previous work optimizing MongoDB queries and reducing API latency by 250ms, what specific indexing and aggregation strategies did you employ, and how do you prevent common bottlenecks like unindexed collscans?',
+
+      intention: 'Assess hands-on expertise in MongoDB performance tuning, query execution plan analysis, index strategies, and schema modeling for scale.',
+
+      answer: "The candidate should mention utilizing MongoDB tools like explain plans (explain('executionStats')) to detect COLLSCAN stages, crafting compound indexes adhering to the Equality-Sort-Range rule, using covered queries, optimizing aggregation pipelines by filtering early with $match, and evaluating document schema trade-offs between embedding and referencing."
+    },
+    {
+      question: 'When refactoring the client dashboard using React and Redux Toolkit, what techniques did you leverage to reduce initial page load time by 40% and prevent unnecessary re-renders across enterprise data tables?',
+
+      intention: 'Determine frontend architectural competence, familiarity with React rendering mechanics, state normalization, and performance profiling tools.',
+
+      answer: "The candidate should discuss code splitting with React.lazy and dynamic imports, normalized state structure using Redux Toolkit's createEntityAdapter, memoization hooks like useMemo and useCallback, React.memo for pure subcomponents, virtualized lists for large datasets, and measuring performance via the React Profiler and Web Vitals."
+    },
+    {
+      question: 'The role lists message brokers like RabbitMQ or Kafka as preferred skills for decoupled supply chain workflows. How would you introduce an asynchronous messaging system to handle inventory updates reliably?',
+
+      intention: "Test the candidate's architectural vision for distributed systems and their readiness to bridge the gap into message-driven architectures.",
+      answer: 'The candidate should explain the concepts of message queues, topics, consumer groups, and idempotency. They should walk through a scenario where inventory events are published asynchronously to decouple checkout from backend supply chain workflows, addressing delivery guarantees (at-least-once), dead-letter queues, and handling backpressure.'     
+    }
+  ],
+  behaviouralQuestions: [
+    {
+      question: 'Can you describe a situation where you had to push back on a feature scope requested by a Product Manager to protect system stability during a scaling phase?',  
+
+      intention: 'Gauge cross-functional collaboration, technical communication, business acumen, and assertiveness in balancing tech debt with feature velocity.',
+      answer: 'Use the STAR method: explain the high-traffic context, the proposed product feature that posed architectural risks, how you quantified the potential impact using data or latency projections, the alternative phased rollout or MVP compromise proposed, and the positive outcome on delivery and system reliability.'
+    },
+    {
+      question: 'Tell me about a time you mentored a junior or mid-level engineer who was struggling with code quality or architectural patterns. How did you guide them?',
+
+      intention: 'Evaluate leadership, empathy, mentorship methodology, and commitment to cultivating engineering best practices.',
+      answer: "Frame the response using the STAR format: detail the specific gap observed, the proactive approach taken (such as paired programming, constructive code review guidelines, or architecture workshops), how psychological safety was maintained, and the measurable improvement in the engineer's autonomy and code quality."
+    },
+    {
+      question: 'Walk us through a critical production bug or outage that occurred during the microservices migration at TechHive Solutions. How did you handle resolution and post-incident analysis?',
+      
+      intention: 'Assess crisis management, root cause analysis capability, emotional composure under pressure, and commitment to post-mortem blameless culture.',
+
+      answer: 'Outline the incident clearly: identification through monitoring, containment strategy, communication with stakeholders, rollback or hotfix implementation, and subsequent root-cause analysis (5 Whys), concluding with long-term monitoring and CI/CD safeguards added to prevent recurrence.'
+    }
+  ],
+  skillGap: [
+    {
+      skill: 'Distributed Message Brokers (Kafka / RabbitMQ)',
+      severity: 'medium'
+    },
+    { skill: 'GraphQL / Federated Schemas', severity: 'low' }
+  ],
+  preparationPlan: [
+    {
+      day: 1,
+      focus: 'Distributed Messaging & Asynchronous Architecture',
+      tasks: [Array]
+    },
+    {
+      day: 2,
+      focus: 'Backend Scaling & Node.js Concurrency',
+      tasks: [Array]
+    },
+    {
+      day: 3,
+      focus: 'MongoDB Performance Tuning & Indexing',
+      tasks: [Array]
+    },
+    {
+      day: 4,
+      focus: 'Frontend Architecture & Web Vitals Optimization',     
+      tasks: [Array]
+    },
+    {
+      day: 5,
+      focus: 'System Design Synthesis & Behavioral Rehearsal',      
+      tasks: [Array]
+    }
+  ]
+}
