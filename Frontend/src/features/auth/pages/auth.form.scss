@@ -23,8 +23,9 @@ main{
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
-
+        
         input{
+            color:black;
             border:none;
             outline: none;
             padding-inline: 1rem;

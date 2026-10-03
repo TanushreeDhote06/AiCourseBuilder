@@ -1,19 +1,19 @@
 import { create } from "axios";
-import { createContext, useState } from "react";
+import { createContext, useState} from "react";
+import { getMe } from "./services/auth.api";
 //createContext() and useContext() solves the problem of prop drilling
-export const AuthContext=createContext()
+export const AuthContext = createContext()
 
-export const AuthProvider=({children})=>{
-    const[user,setUser]=useState(null)
-    const [loading,setLoading]=useState(false)
+export const AuthProvider = ({ children }) => {
+    const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true) //why true? to first show the spinner untill the user is fetched
 
-    
     return (
         //here the value is an object of state and setter function
         // so we can pass the value to any child component without prop drilling
         //what is AuthContext.Provider ? 
         // AuthContext.Provider is a component that is used to pass the value to any child component
-        <AuthContext.Provider value={{user,setUser,loading,setLoading}}>
+        <AuthContext.Provider value={{ user, setUser, loading, setLoading }}>
             {children}
         </AuthContext.Provider>
         //this {children} here means the components that are wrapped by the AuthProvider
